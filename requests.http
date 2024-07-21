@@ -1,0 +1,44 @@
+
+@baseUrl = http://0.0.0.0:8080
+
+###
+
+# создать пользователя
+POST {{baseUrl}}/user
+Content-Type: application/json
+
+{
+    "name": "user1",
+    "email": "user1@yandex.ru",
+    "password": "user1 password"
+}
+
+### 
+
+# получить пользователя
+GET {{baseUrl}}/user/1
+Content-Type: application/json
+
+###
+
+# создать объявление
+POST {{baseUrl}}/advert
+Content-Type: application/json
+
+{
+    "title": "test title 1",
+    "note": "test note 1",
+    "owner_id": 1
+}
+
+### 
+
+# получить объявление
+GET {{baseUrl}}/advert/1
+Content-Type: application/json
+
+### 
+
+# удалить объявление
+DELETE {{baseUrl}}/advert/1
+Content-Type: application/json
